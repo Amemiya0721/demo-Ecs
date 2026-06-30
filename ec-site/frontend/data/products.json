@@ -11,12 +11,8 @@
     "status": "available",
     "bundleEligible": true,
     "shippingSize": "small",
-    "thumbnail": "assets/images/products/r9200-crank/main.jpg",
-    "images": [
-      "assets/images/products/r9200-crank/1.jpg",
-      "assets/images/products/r9200-crank/2.jpg",
-      "assets/images/products/r9200-crank/3.jpg"
-    ],
+    "thumbnail": "assets/images/main.png",
+    "images": ["assets/images/main.png"],
     "createdAt": "2026-06-27",
     "updatedAt": "2026-06-27"
   },
@@ -32,11 +28,8 @@
     "status": "available",
     "bundleEligible": true,
     "shippingSize": "small",
-    "thumbnail": "assets/images/products/r8170-sti/main.jpg",
-    "images": [
-      "assets/images/products/r8170-sti/1.jpg",
-      "assets/images/products/r8170-sti/2.jpg"
-    ],
+    "thumbnail": "assets/images/main.png",
+    "images": ["assets/images/main.png"],
     "createdAt": "2026-06-26",
     "updatedAt": "2026-06-26"
   },
@@ -52,11 +45,8 @@
     "status": "sold",
     "bundleEligible": false,
     "shippingSize": "large",
-    "thumbnail": "assets/images/products/mavic-cosmic/main.jpg",
-    "images": [
-      "assets/images/products/mavic-cosmic/1.jpg",
-      "assets/images/products/mavic-cosmic/2.jpg"
-    ],
+    "thumbnail": "assets/images/main.png",
+    "images": ["assets/images/main.png"],
     "createdAt": "2026-06-25",
     "updatedAt": "2026-06-25"
   },
@@ -72,10 +62,8 @@
     "status": "reserved",
     "bundleEligible": true,
     "shippingSize": "small",
-    "thumbnail": "assets/images/products/r9270-fd/main.jpg",
-    "images": [
-      "assets/images/products/r9270-fd/1.jpg"
-    ],
+    "thumbnail": "assets/images/main.png",
+    "images": ["assets/images/main.png"],
     "createdAt": "2026-06-24",
     "updatedAt": "2026-06-24"
   },
@@ -91,11 +79,8 @@
     "status": "available",
     "bundleEligible": true,
     "shippingSize": "small",
-    "thumbnail": "assets/images/products/r9250-rd/main.jpg",
-    "images": [
-      "assets/images/products/r9250-rd/1.jpg",
-      "assets/images/products/r9250-rd/2.jpg"
-    ],
+    "thumbnail": "assets/images/main.png",
+    "images": ["assets/images/main.png"],
     "createdAt": "2026-06-23",
     "updatedAt": "2026-06-23"
   },
@@ -111,10 +96,8 @@
     "status": "available",
     "bundleEligible": true,
     "shippingSize": "small",
-    "thumbnail": "assets/images/products/r9200-cs/main.jpg",
-    "images": [
-      "assets/images/products/r9200-cs/1.jpg"
-    ],
+    "thumbnail": "assets/images/main.png",
+    "images": ["assets/images/main.png"],
     "createdAt": "2026-06-22",
     "updatedAt": "2026-06-22"
   },
@@ -130,10 +113,8 @@
     "status": "available",
     "bundleEligible": true,
     "shippingSize": "small",
-    "thumbnail": "assets/images/products/gp5000/main.jpg",
-    "images": [
-      "assets/images/products/gp5000/1.jpg"
-    ],
+    "thumbnail": "assets/images/main.png",
+    "images": ["assets/images/main.png"],
     "createdAt": "2026-06-21",
     "updatedAt": "2026-06-21"
   },
@@ -149,11 +130,8 @@
     "status": "available",
     "bundleEligible": true,
     "shippingSize": "small",
-    "thumbnail": "assets/images/products/metron5d/main.jpg",
-    "images": [
-      "assets/images/products/metron5d/1.jpg",
-      "assets/images/products/metron5d/2.jpg"
-    ],
+    "thumbnail": "assets/images/main.png",
+    "images": ["assets/images/main.png"],
     "createdAt": "2026-06-20",
     "updatedAt": "2026-06-20"
   },
@@ -169,12 +147,8 @@
     "status": "available",
     "bundleEligible": false,
     "shippingSize": "large",
-    "thumbnail": "assets/images/products/sl7/main.jpg",
-    "images": [
-      "assets/images/products/sl7/1.jpg",
-      "assets/images/products/sl7/2.jpg",
-      "assets/images/products/sl7/3.jpg"
-    ],
+    "thumbnail": "assets/images/main.png",
+    "images": ["assets/images/main.png"],
     "createdAt": "2026-06-19",
     "updatedAt": "2026-06-19"
   },
@@ -190,11 +164,8 @@
     "status": "hidden",
     "bundleEligible": false,
     "shippingSize": "large",
-    "thumbnail": "assets/images/products/caad13/main.jpg",
-    "images": [
-      "assets/images/products/caad13/1.jpg",
-      "assets/images/products/caad13/2.jpg"
-    ],
+    "thumbnail": "assets/images/main.png",
+    "images": ["assets/images/main.png"],
     "createdAt": "2026-06-18",
     "updatedAt": "2026-06-18"
   }
