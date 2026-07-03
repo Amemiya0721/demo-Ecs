@@ -1,0 +1,23 @@
+バックエンド
+
+Java Spring Boot
+
+MySql(ローカル)
+
+RestAPIで実装可能だと思われる
+
+
+フロント
+html
+css　Bootstrap
+js
+
+
+
+07/03
+企画案構築
+
+仮置き
+
+とりあえず置いただけ　DBとつなげる動作や機能についてはまだなし
+
