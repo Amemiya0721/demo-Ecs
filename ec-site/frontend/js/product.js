@@ -58,10 +58,11 @@ function render() {
                 <strong>メーカー:</strong> ${product.manufacturer}<br>
                 <strong>ランク:</strong> ${product.rank}
             </div>
-
-            <button class="btn btn-dark w-100 mb-3">
-                カートに入れる
-            </button>
+                <button
+                    class="btn btn-dark w-100 mb-3"
+                    onclick="addToCart()">
+                  カートに入れる
+                </button>
 
             <div class="d-flex gap-2 flex-wrap">
 
@@ -100,4 +101,56 @@ function showError(msg) {
             <h4>${msg}</h4>
         </div>
     `;
+}
+// ==============================
+// カート機能
+// ==============================
+
+// カート追加
+function addToCart() {
+
+    let cart = getCart();
+
+    const item = cart.find(p => p.id === product.id);
+
+    if (item) {
+        item.qty++;
+    } else {
+        cart.push({
+            id: product.id,
+            qty: 1
+        });
+    }
+
+    saveCart(cart);
+
+    alert("カートへ追加しました。");
+}
+
+// Cookieから取得
+function getCart() {
+
+    const cookie = document.cookie
+        .split("; ")
+        .find(row => row.startsWith("cart="));
+
+    if (!cookie) {
+        return [];
+    }
+
+    try {
+        return JSON.parse(decodeURIComponent(cookie.split("=")[1]));
+    } catch {
+        return [];
+    }
+}
+
+// Cookieへ保存
+function saveCart(cart) {
+
+    document.cookie =
+        "cart=" +
+        encodeURIComponent(JSON.stringify(cart)) +
+        ";path=/;max-age=" + (60 * 60 * 24 * 7);
+
 }

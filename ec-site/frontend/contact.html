@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お問い合わせ | OVERHAUL</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="products.html">OVERHAUL</a>
+        </div>
+    </nav>
+
+    <main class="container py-5">
+
+    <div class="text-center mb-5">
+        <h1 class="fw-bold">お問い合わせ</h1>
+        <p class="text-muted">
+            商品やご注文に関するご質問、ご意見・ご要望などございましたら、お気軽にお問い合わせください。
+        </p>
+    </div>
+
+    <!-- フィードバック -->
+    <div class="alert alert-light border mb-4">
+        <h5>💬 フィードバックをお寄せください</h5>
+
+        <p class="mb-2">
+            OVERHAULは個人開発・運営のECサイトです。
+        </p>
+
+        <p class="mb-2">
+            「こんな機能が欲しい」
+            「取り扱ってほしい商品がある」
+            「もっとこうした方が使いやすい」
+            など、お客様からのご意見を歓迎しております。
+        </p>
+
+        <p class="mb-0">
+            いただいたご意見は、今後のサービス改善の参考にさせていただきます。
+        </p>
+    </div>
+
+    <!-- FAQ -->
+    <div class="card mb-4">
+        <div class="card-body">
+
+            <h4>お問い合わせの前に</h4>
+
+            <p class="mb-3">
+                お問い合わせの多い内容を「よくある質問」にまとめています。
+                お問い合わせ前にぜひご確認ください。
+            </p>
+
+            <a href="faq.html" class="btn btn-outline-primary">
+                よくある質問を見る
+            </a>
+
+        </div>
+    </div>
+
+    <!-- フォーム -->
+    <div class="card">
+        <div class="card-body">
+
+            <h4 class="mb-4">お問い合わせフォーム</h4>
+
+            <form>
+
+                <div class="mb-3">
+                    <label class="form-label">お問い合わせ種別</label>
+
+                    <select class="form-select">
+                        <option>商品について</option>
+                        <option>適合確認</option>
+                        <option>商品状態について</option>
+                        <option>在庫確認</option>
+                        <option>注文について</option>
+                        <option>配送・送料</option>
+                        <option>お支払いについて</option>
+                        <option>返品・交換</option>
+                        <option>ご意見・ご要望</option>
+                        <option>その他</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">お名前</label>
+                    <input type="text" class="form-control">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">メールアドレス</label>
+                    <input type="email" class="form-control">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">注文番号（任意）</label>
+                    <input type="text" class="form-control">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">商品番号（任意）</label>
+                    <input type="text" class="form-control">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">お問い合わせ内容</label>
+                    <textarea class="form-control" rows="6"></textarea>
+                </div>
+
+                <div class="form-check mb-4">
+                    <input class="form-check-input" type="checkbox" id="agree">
+                    <label class="form-check-label" for="agree">
+                        プライバシーポリシーに同意します
+                    </label>
+                </div>
+
+                <button class="btn btn-primary w-100">
+                    お問い合わせを送信
+                </button>
+
+            </form>
+
+        </div>
+    </div>
+
+</main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

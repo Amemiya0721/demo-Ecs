@@ -5,7 +5,7 @@
 // =====================================
 
 // 商品一覧表示数
-const DISPLAY_COUNT = 20;
+const DISPLAY_COUNT = 4;
 
 // JSON読込
 async function loadProducts() {
