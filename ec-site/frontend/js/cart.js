@@ -1,5 +1,17 @@
 document.addEventListener("DOMContentLoaded", loadCart);
+function escapeHtml(str) {
 
+    if (str == null) return "";
+
+    return String(str).replace(/[&<>"']/g, c => ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        "\"": "&quot;",
+        "'": "&#39;"
+    }[c]));
+
+}
 async function loadCart() {
 
     const cart = getCart();
@@ -19,67 +31,106 @@ async function loadCart() {
             </div>
         `;
 
+        document.getElementById("cart-total").innerText = "¥0";
+
         return;
     }
 
     area.innerHTML = "";
 
-    cart.forEach(item => {
+    cart.forEach((item, index) => {
 
-        const product = products.find(p => p.id === item.id);
+    const product = products.find(p => p.id == item.id);
 
-        if (!product) return;
+    if (!product) return;
 
-        const subtotal = product.price * item.qty;
+    const image = product.images?.[0] || "assets/images/noimage.jpg";
 
-        total += subtotal;
+    total += product.price;
 
-        area.innerHTML += `
+    area.innerHTML += `
 
-        <div class="card mb-3">
+<div class="card mb-4 shadow-sm">
 
-            <div class="row g-0">
+    <div class="row g-0">
 
-                <div class="col-md-3">
+        <div class="col-md-3">
 
-                    <img
-                        src="${product.thumbnail}"
-                        class="img-fluid rounded-start">
+            <img
+                src="${escapeHtml(image)}"
+                class="img-fluid rounded-start"
+                alt="${escapeHtml(product.name)}"
+                onerror="this.src='assets/images/noimage.jpg';">
 
-                </div>
+        </div>
 
-                <div class="col-md-9">
+        <div class="col-md-9">
 
-                    <div class="card-body">
+            <div class="card-body">
 
-                        <h5>${product.name}</h5>
+                <h4>
+                    ${escapeHtml(product.name)}
+                </h4>
 
-                        <p>数量：${item.qty}</p>
+                <p class="text-muted">
 
-                        <p>価格：¥${product.price.toLocaleString()}</p>
+                    サイズ：
+                    ${item.size || "-"}
 
-                        <h5 class="text-danger">
-                            ¥${subtotal.toLocaleString()}
-                        </h5>
+                </p>
 
-                    </div>
+                <p>
 
-                </div>
+                    価格：
+                    ¥${product.price.toLocaleString()}
+
+                </p>
+
+                <h5 class="text-danger">
+
+                    小計：
+                    ¥${product.price.toLocaleString()}
+
+                </h5>
+
+                <button
+                    class="btn btn-outline-danger mt-3"
+                    onclick="removeItem(${index})">
+
+                    カートから削除
+
+                </button>
 
             </div>
 
         </div>
 
-        `;
+    </div>
 
-    });
+</div>
+
+`;
+
+});
+
 
     document.getElementById("cart-total").innerText =
         "¥" + total.toLocaleString();
 
 }
 
-// Cookie取得
+function removeItem(index) {
+
+    const cart = getCart();
+
+    cart.splice(index, 1);
+
+    saveCart(cart);
+
+    loadCart();
+
+}
+
 function getCart() {
 
     const cookie = document.cookie
@@ -87,9 +138,22 @@ function getCart() {
         .find(row => row.startsWith("cart="));
 
     if (!cookie) {
+
         return [];
+
     }
 
-    return JSON.parse(decodeURIComponent(cookie.split("=")[1]));
+    return JSON.parse(
+        decodeURIComponent(cookie.split("=")[1])
+    );
+
+}
+
+function saveCart(cart) {
+
+    document.cookie =
+        "cart=" +
+        encodeURIComponent(JSON.stringify(cart)) +
+        ";path=/;max-age=2592000";
 
 }

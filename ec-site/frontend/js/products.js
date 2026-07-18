@@ -1,6 +1,6 @@
 // =====================================
 // OVERHAUL
-// products.js（修正版）
+// products.js
 // =====================================
 
 const PAGE_SIZE = 20;
@@ -61,18 +61,24 @@ function createOptions(id, list) {
     const unique = [...new Set(list)].sort();
 
     unique.forEach(item => {
-        select.innerHTML += `<option value="${item}">${item}</option>`;
+        select.innerHTML += `
+            <option value="${escapeHtml(item)}">
+                ${escapeHtml(item)}
+            </option>
+        `;
     });
 }
 
 // 検索・絞り込み
 function applyFilters() {
+
     const keyword = document.getElementById("search").value.toLowerCase();
     const category = document.getElementById("category").value;
     const manufacturer = document.getElementById("manufacturer").value;
     const status = document.getElementById("status").value;
 
     filteredProducts = products.filter(product => {
+
         return (
             (
                 product.name.toLowerCase().includes(keyword) ||
@@ -85,6 +91,7 @@ function applyFilters() {
             &&
             (!status || product.status === status)
         );
+
     });
 
     sortProducts();
@@ -96,9 +103,11 @@ function applyFilters() {
 
 // 並び替え
 function sortProducts() {
+
     const sort = document.getElementById("sort").value;
 
     switch (sort) {
+
         case "priceAsc":
             filteredProducts.sort((a, b) => a.price - b.price);
             break;
@@ -112,10 +121,12 @@ function sortProducts() {
                 (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
             );
     }
+
 }
 
 // 描画
 function render() {
+
     const start = (currentPage - 1) * PAGE_SIZE;
     const end = start + PAGE_SIZE;
 
@@ -126,17 +137,90 @@ function render() {
     document.getElementById("count").textContent = filteredProducts.length;
 
     renderPagination();
+
 }
 
 // 商品表示
 function displayProducts(list) {
+
     const container = document.getElementById("product-list");
 
     container.innerHTML = list.map(createCard).join("");
+
+}
+
+// カード生成
+function createCard(product) {
+
+    // 一覧で表示する画像
+    const image = product.images?.[0] ?? "assets/images/noimage.jpg";
+
+    return `
+        <div class="col-xl-3 col-lg-4 col-md-6">
+
+            <div class="card product-card h-100">
+
+                <img
+                    src="${escapeHtml(image)}"
+                    class="card-img-top"
+                    alt="${escapeHtml(product.name)}"
+                    onerror="this.src='assets/images/noimage.jpg';">
+
+                <div class="card-body d-flex flex-column">
+
+                    <!-- 価格 + ランク -->
+                    <div class="price-area">
+
+                        <div class="price">
+                            ¥${product.price.toLocaleString()}
+                        </div>
+
+                        <span class="rank-badge rank-${product.rank}">
+                            ${escapeHtml(product.rank)}
+                        </span>
+
+                    </div>
+
+                    <!-- 商品名 -->
+                    <div class="product-name">
+                        ${escapeHtml(product.name)}
+                    </div>
+
+                    <p class="mt-3">
+                        ${getDescriptionPreview(product.description)}
+                    </p>
+
+                    <a
+                        href="product.html?id=${product.id}"
+                        class="btn btn-dark mt-auto">
+
+                        詳細を見る
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+    `;
+}
+// 商品説明プレビュー
+function getDescriptionPreview(description) {
+
+    if (!Array.isArray(description) || description.length === 0) {
+        return "";
+    }
+
+    const body = description[0].body ?? "";
+
+    return escapeHtml(body.split("\n")[0]);
+
 }
 
 // ページング
 function renderPagination() {
+
     const pagination = document.getElementById("pagination");
 
     const pageCount = Math.ceil(filteredProducts.length / PAGE_SIZE);
@@ -144,51 +228,45 @@ function renderPagination() {
     let html = "";
 
     for (let i = 1; i <= pageCount; i++) {
+
         html += `
             <li class="page-item ${i === currentPage ? "active" : ""}">
-                <a class="page-link" href="#" onclick="changePage(${i})">
+                <a
+                    class="page-link"
+                    href="#"
+                    onclick="changePage(${i})">
+
                     ${i}
+
                 </a>
             </li>
         `;
+
     }
 
     pagination.innerHTML = html;
+
 }
 
 function changePage(page) {
+
     currentPage = page;
+
     render();
+
 }
 
-// カード生成
-function createCard(product) {
-    return `
-        <div class="col-xl-3 col-lg-4 col-md-6">
-            <div class="card product-card h-100">
-                <img src="${product.thumbnail}" class="card-img-top" alt="${product.name}">
+// HTMLエスケープ
+function escapeHtml(str) {
 
-                <div class="card-body d-flex flex-column">
+    if (str == null) return "";
 
-                    <div class="price">
-                        ¥${product.price.toLocaleString()}
-                    </div>
+    return String(str).replace(/[&<>"']/g, c => ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        "\"": "&quot;",
+        "'": "&#39;"
+    }[c]));
 
-                    <div class="d-flex justify-content-between mt-2">
-                        <span>${product.name}</span>
-                        <span>${product.rank}</span>
-                    </div>
-
-                    <p class="mt-3">
-                        ${product.description}
-                    </p>
-
-                    <a href="product.html?id=${product.id}" class="btn btn-dark mt-auto">
-                        詳細を見る
-                    </a>
-
-                </div>
-            </div>
-        </div>
-    `;
 }

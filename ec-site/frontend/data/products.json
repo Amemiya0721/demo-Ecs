@@ -7,12 +7,27 @@
     "price": 29800,
     "rank": "A",
     "condition": "使用感の少ない美品です。",
-    "description": "歯の摩耗も少なく、動作確認済みです。",
+    "description": [
+      {
+        "heading": "商品状態",
+        "body": "歯の摩耗は少なめ\n動作確認済み\n使用感の少ない美品"
+      },
+      {
+        "heading": "付属品",
+        "body": "クランク左右\nチェーンリング（52-36T）"
+      },
+      {
+        "heading": "コメント",
+        "body": "清掃・点検済みです。\n中古品のため細かな傷は写真をご確認ください。"
+      }
+    ],
     "status": "available",
     "bundleEligible": true,
     "shippingSize": "small",
-    "thumbnail": "assets/images/main.png",
-    "images": ["assets/images/main.png"],
+    "thumbnail": "assets/images/Dura-ace.jpg",
+    "images": [
+      "assets/images/Dura-ace.jpg"
+    ],
     "createdAt": "2026-06-27",
     "updatedAt": "2026-06-27"
   },
@@ -24,149 +39,65 @@
     "price": 35800,
     "rank": "A",
     "condition": "目立つ傷はありません。",
-    "description": "左右セット。動作確認済み。",
+    "description": [
+      {
+        "heading": "商品状態",
+        "body": "左右セット\n動作確認済み\n目立つ傷なし"
+      },
+      {
+        "heading": "付属品",
+        "body": "左右STIレバー"
+      },
+      {
+        "heading": "コメント",
+        "body": "油圧ディスクブレーキ対応。\n快適な操作感です。"
+      }
+    ],
     "status": "available",
     "bundleEligible": true,
     "shippingSize": "small",
     "thumbnail": "assets/images/main.png",
-    "images": ["assets/images/main.png"],
+    "images": [
+      "assets/images/main.png"
+    ],
     "createdAt": "2026-06-26",
     "updatedAt": "2026-06-26"
   },
   {
     "id": 3,
-    "name": "MAVIC COSMIC PRO CARBON SL UST",
+    "name": "ヨーレオ　カーボンホイール",
     "category": "ホイール",
-    "manufacturer": "MAVIC",
+    "manufacturer": "YOLEO",
     "price": 78000,
     "rank": "A",
     "condition": "振れなし。",
-    "description": "リムブレーキモデル。前後セット。",
+    "description": [
+      {
+        "heading": "商品状態",
+        "body": "振れなし\n回転良好\n前後セット"
+      },
+      {
+        "heading": "付属品",
+        "body": "前後ホイール"
+      },
+      {
+        "heading": "コメント",
+        "body": "リムブレーキモデルです。\nタイヤは付属しません。"
+      }
+    ],
     "status": "sold",
     "bundleEligible": false,
     "shippingSize": "large",
-    "thumbnail": "assets/images/main.png",
-    "images": ["assets/images/main.png"],
+    "thumbnail": "assets/images/YOLEO.jpg",
+    "images": [
+      "assets/images/YOLEO/YOLEO.jpg",
+      "assets/images/YOLEO/YOLEO2.jpg",
+            "assets/images/YOLEO/YOLEO3.jpg"
+
+
+
+    ],
     "createdAt": "2026-06-25",
     "updatedAt": "2026-06-25"
-  },
-  {
-    "id": 4,
-    "name": "SHIMANO DURA-ACE R9270 フロントディレイラー",
-    "category": "フロントディレイラー",
-    "manufacturer": "SHIMANO",
-    "price": 14800,
-    "rank": "A",
-    "condition": "小傷あり。",
-    "description": "Di2対応。",
-    "status": "reserved",
-    "bundleEligible": true,
-    "shippingSize": "small",
-    "thumbnail": "assets/images/main.png",
-    "images": ["assets/images/main.png"],
-    "createdAt": "2026-06-24",
-    "updatedAt": "2026-06-24"
-  },
-  {
-    "id": 5,
-    "name": "SHIMANO DURA-ACE R9250 リアディレイラー",
-    "category": "リアディレイラー",
-    "manufacturer": "SHIMANO",
-    "price": 26800,
-    "rank": "A",
-    "condition": "動作良好。",
-    "description": "プーリー摩耗少なめ。",
-    "status": "available",
-    "bundleEligible": true,
-    "shippingSize": "small",
-    "thumbnail": "assets/images/main.png",
-    "images": ["assets/images/main.png"],
-    "createdAt": "2026-06-23",
-    "updatedAt": "2026-06-23"
-  },
-  {
-    "id": 6,
-    "name": "SHIMANO DURA-ACE CS-R9200 11-30T",
-    "category": "スプロケット",
-    "manufacturer": "SHIMANO",
-    "price": 17800,
-    "rank": "B",
-    "condition": "通常使用による摩耗があります。",
-    "description": "12速スプロケット。",
-    "status": "available",
-    "bundleEligible": true,
-    "shippingSize": "small",
-    "thumbnail": "assets/images/main.png",
-    "images": ["assets/images/main.png"],
-    "createdAt": "2026-06-22",
-    "updatedAt": "2026-06-22"
-  },
-  {
-    "id": 7,
-    "name": "Continental GP5000 700×25C 2本セット",
-    "category": "タイヤ",
-    "manufacturer": "Continental",
-    "price": 9800,
-    "rank": "A",
-    "condition": "新品未使用。",
-    "description": "クリンチャータイヤ。",
-    "status": "available",
-    "bundleEligible": true,
-    "shippingSize": "small",
-    "thumbnail": "assets/images/main.png",
-    "images": ["assets/images/main.png"],
-    "createdAt": "2026-06-21",
-    "updatedAt": "2026-06-21"
-  },
-  {
-    "id": 8,
-    "name": "Vision Metron 5D ハンドル 110×400mm",
-    "category": "ハンドル",
-    "manufacturer": "Vision",
-    "price": 39800,
-    "rank": "B",
-    "condition": "クランプ跡あり。",
-    "description": "一体型エアロハンドル。",
-    "status": "available",
-    "bundleEligible": true,
-    "shippingSize": "small",
-    "thumbnail": "assets/images/main.png",
-    "images": ["assets/images/main.png"],
-    "createdAt": "2026-06-20",
-    "updatedAt": "2026-06-20"
-  },
-  {
-    "id": 9,
-    "name": "SPECIALIZED TARMAC SL7 フレームセット 52サイズ",
-    "category": "フレーム",
-    "manufacturer": "SPECIALIZED",
-    "price": 198000,
-    "rank": "A",
-    "condition": "落車歴なし。",
-    "description": "カーボンフレームセット。",
-    "status": "available",
-    "bundleEligible": false,
-    "shippingSize": "large",
-    "thumbnail": "assets/images/main.png",
-    "images": ["assets/images/main.png"],
-    "createdAt": "2026-06-19",
-    "updatedAt": "2026-06-19"
-  },
-  {
-    "id": 10,
-    "name": "Cannondale CAAD13 Disc 105 完成車 48サイズ",
-    "category": "完成車",
-    "manufacturer": "Cannondale",
-    "price": 168000,
-    "rank": "B",
-    "condition": "通常使用による小傷があります。",
-    "description": "アルミロードバイク完成車。",
-    "status": "hidden",
-    "bundleEligible": false,
-    "shippingSize": "large",
-    "thumbnail": "assets/images/main.png",
-    "images": ["assets/images/main.png"],
-    "createdAt": "2026-06-18",
-    "updatedAt": "2026-06-18"
   }
 ]
