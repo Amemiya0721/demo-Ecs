@@ -1,0 +1,271 @@
+/* =====================================
+   PRODUCTS PAGE
+===================================== */
+
+/* Hero */
+.page-hero {
+
+    background: #111;
+    color: #fff;
+
+    padding: 100px 0 80px;
+
+    text-align: center;
+
+}
+
+.page-hero h1 {
+
+    font-size: 3rem;
+    font-weight: 900;
+    letter-spacing: 6px;
+    margin-bottom: 15px;
+
+}
+
+.page-hero p {
+
+    color: #bbb;
+    margin: 0;
+
+}
+
+/* パンくず */
+
+.breadcrumb {
+
+    margin: 0;
+    background: transparent;
+
+}
+
+.breadcrumb a {
+
+    color: #666;
+    text-decoration: none;
+
+}
+
+.breadcrumb a:hover {
+
+    color: #111;
+
+}
+
+/* フィルター */
+
+.card {
+
+    border: none;
+    border-radius: 12px;
+
+    box-shadow: 0 8px 30px rgba(0,0,0,.08);
+
+}
+
+.form-control,
+.form-select {
+
+    height: 48px;
+    border-radius: 8px;
+
+}
+
+/* 商品カード */
+
+.product-card {
+
+    position: relative;
+
+    overflow: hidden;
+
+    border: none;
+
+    transition: .3s;
+
+}
+
+.product-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow: 0 15px 35px rgba(0,0,0,.15);
+
+}
+
+.product-card img {
+
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+
+}
+
+/* SOLD / HOLD */
+
+.status-badge {
+
+    position: absolute;
+
+    top: 15px;
+    right: -40px;
+
+    width: 150px;
+
+    text-align: center;
+
+    color: #fff;
+
+    font-weight: bold;
+
+    padding: 6px 0;
+
+    transform: rotate(45deg);
+
+    z-index: 10;
+
+    letter-spacing: 2px;
+
+}
+
+.status-badge.sold {
+
+    background: #d32f2f;
+
+}
+
+.status-badge.reserved {
+
+    background: #f57c00;
+
+}
+
+/* ランク */
+
+.rank-badge {
+
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    font-weight: bold;
+
+    color: #fff;
+
+}
+
+/* カテゴリ */
+
+.product-category {
+
+    font-size: .8rem;
+
+    color: #888;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 6px;
+
+}
+
+/* 商品名 */
+
+.product-name {
+
+    font-size: 1.2rem;
+
+    font-weight: 700;
+
+    min-height: 58px;
+
+}
+
+/* 説明 */
+
+.description {
+
+    color: #666;
+
+    font-size: .9rem;
+
+    min-height: 50px;
+
+}
+
+/* 価格 */
+
+.price {
+
+    font-size: 1.8rem;
+
+    font-weight: 900;
+
+}
+
+/* ボタン */
+
+.product-card .btn {
+
+    border-radius: 0;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+}
+
+.btn-secondary.disabled {
+
+    pointer-events: none;
+
+    opacity: .8;
+
+}
+
+/* ページネーション */
+
+.pagination .page-link {
+
+    color: #111;
+
+}
+
+.pagination .active .page-link {
+
+    background: #111;
+
+    border-color: #111;
+
+}
+
+/* レスポンシブ */
+
+@media (max-width: 768px) {
+
+    .page-hero {
+
+        padding: 70px 0;
+
+    }
+
+    .page-hero h1 {
+
+        font-size: 2.2rem;
+
+    }
+
+    .product-name {
+
+        min-height: auto;
+
+    }
+
+}

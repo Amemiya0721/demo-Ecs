@@ -1,0 +1,455 @@
+[
+    {
+        "id": 1,
+        "name": "DURA-ACE R9200 クランクアーム",
+        "category": "コンポーネント",
+        "manufacturer": "SHIMANO",
+        "year": "2022",
+        "price": 29800,
+        "condition": {
+            "rank": "A",
+            "junk": false,
+            "text": "使用感の少ない美品",
+            "notes": [
+                "歯摩耗少なめ",
+                "動作確認済み"
+            ]
+        },
+        "spec": {
+            "weight": "714g",
+            "speed": "12s",
+            "material": "aluminum"
+        },
+        "description": [
+            {
+                "heading": "ペダル抜き",
+                "body": "歯の摩耗は少なめ"
+            },
+            {
+                "heading": "商品状態",
+                "body": "歯の摩耗は少なめ"
+            }
+        ],
+        "status": "available",
+        "bundleEligible": true,
+        "shippingSize": "small",
+        "images": [
+            "assets/images/Dura-ace.jpg"
+        ],
+        "favoriteCount": 0,
+        "createdAt": "2026-06-27",
+        "updatedAt": "2026-06-27"
+    },
+    {
+        "id": 2,
+        "name": "SHIMANO ULTEGRA R8170 STIレバー 左右セット",
+        "category": "シフター",
+        "manufacturer": "SHIMANO",
+        "year": "2023",
+        "price": 35800,
+        "condition": {
+            "rank": "A",
+            "junk": false,
+            "text": "目立つ傷の少ない良品",
+            "notes": [
+                "動作確認済み",
+                "油圧ホース付属"
+            ]
+        },
+        "spec": {
+            "weight": "391g",
+            "speed": "11s",
+            "material": "aluminum"
+        },
+        "description": [
+            {
+                "heading": "商品状態",
+                "body": "左右セット\n動作確認済み"
+            },
+            {
+                "heading": "付属品",
+                "body": "油圧ホース付属"
+            }
+        ],
+        "status": "available",
+        "bundleEligible": true,
+        "shippingSize": "small",
+        "images": [
+            "assets/images/ULTEGRA-lever.png"
+        ],
+        "favoriteCount": 0,
+        "createdAt": "2026-06-28",
+        "updatedAt": "2026-06-28"
+    },
+    {
+        "id": 3,
+        "name": "YOLEO カーボンホイール 前後セット",
+        "category": "ホイール",
+        "manufacturer": "YOLEO",
+        "year": "2024",
+        "price": 78000,
+        "condition": {
+            "rank": "B",
+            "junk": false,
+            "text": "使用感あり",
+            "notes": [
+                "小傷あり",
+                "振れなし"
+            ]
+        },
+        "spec": {
+            "weight": "1480g",
+            "speed": "11s",
+            "material": "carbon"
+        },
+        "description": [
+            {
+                "heading": "商品状態",
+                "body": "回転良好\n振れなし"
+            },
+            {
+                "heading": "注意事項",
+                "body": "タイヤは付属しません"
+            }
+        ],
+        "status": "available",
+        "bundleEligible": false,
+        "shippingSize": "large",
+        "images": [
+            "assets/images/YOLEO/YOLEO.jpg",
+            "assets/images/YOLEO/YOLEO2.jpg",
+            "assets/images/YOLEO/YOLEO3.jpg"
+        ],
+        "favoriteCount": 12,
+        "createdAt": "2026-06-25",
+        "updatedAt": "2026-06-30"
+    },
+    {
+        "id": 4,
+        "name": "SHIMANO 105 RD-R7000 リアディレイラー",
+        "category": "ディレイラー",
+        "manufacturer": "SHIMANO",
+        "year": "2019",
+        "price": 4500,
+        "condition": {
+            "rank": "C",
+            "junk": true,
+            "text": "傷ありジャンク品",
+            "notes": [
+                "プーリー摩耗",
+                "清掃必要"
+            ]
+        },
+        "spec": {
+            "weight": "225g",
+            "speed": "11s",
+            "material": "aluminum"
+        },
+        "description": [
+            {
+                "heading": "商品状態",
+                "body": "変速確認未実施"
+            },
+            {
+                "heading": "ジャンク理由",
+                "body": "傷・汚れあり"
+            }
+        ],
+        "status": "available",
+        "bundleEligible": true,
+        "shippingSize": "small",
+        "images": [
+            "assets/images/rd7000.jpg"
+        ],
+        "favoriteCount": 5,
+        "createdAt": "2026-06-29",
+        "updatedAt": "2026-06-29"
+    },
+    {
+        "id": 5,
+        "name": "SRAM FORCE AXS クランクセット",
+        "category": "コンポーネント",
+        "manufacturer": "SRAM",
+        "year": "2022",
+        "price": 42000,
+        "condition": {
+            "rank": "A",
+            "junk": false,
+            "text": "美品",
+            "notes": [
+                "使用距離少なめ"
+            ]
+        },
+        "spec": {
+            "weight": "710g",
+            "speed": "12s",
+            "material": "carbon"
+        },
+        "description": [
+            {
+                "heading": "商品状態",
+                "body": "目立つ傷なし"
+            }
+        ],
+        "status": "available",
+        "bundleEligible": true,
+        "shippingSize": "small",
+        "images": [
+            "assets/images/sram-force.jpg"
+        ],
+        "favoriteCount": 3,
+        "createdAt": "2026-06-30",
+        "updatedAt": "2026-06-30"
+    },
+    {
+        "id": 6,
+        "name": "GIANT CONTACT SL カーボンハンドル",
+        "category": "ハンドル",
+        "manufacturer": "GIANT",
+        "year": "2021",
+        "price": 12000,
+        "condition": {
+            "rank": "B",
+            "junk": false,
+            "text": "通常使用品",
+            "notes": [
+                "細かな傷あり"
+            ]
+        },
+        "spec": {
+            "weight": "220g",
+            "speed": "-",
+            "material": "carbon"
+        },
+        "description": [
+            {
+                "heading": "商品状態",
+                "body": "クラックなし"
+            }
+        ],
+        "status": "available",
+        "bundleEligible": true,
+        "shippingSize": "medium",
+        "images": [
+            "assets/images/giant-handle.jpg"
+        ],
+        "favoriteCount": 2,
+        "createdAt": "2026-07-01",
+        "updatedAt": "2026-07-01"
+    },
+    {
+        "id": 7,
+        "name": "GIANT TCR SLR0",
+        "category": "フレーム",
+        "manufacturer": "GIANT",
+        "year": "",
+        "price": 65000,
+        "condition": {
+            "rank": "B",
+            "junk": false,
+            "text": "きれいです",
+            "notes": [
+                "塗装割れ",
+                "現状販売"
+            ]
+        },
+        "spec": {
+            "weight": "950g",
+            "speed": "-",
+            "material": "アルミニウム"
+        },
+        "description": [
+            {
+                "heading": "人気アルミ",
+                "body": "早い"
+            }
+        ],
+        "status": "available",
+        "bundleEligible": false,
+        "shippingSize": "large",
+        "images": [
+            "assets/images/road-frame.png"
+        ],
+        "favoriteCount": 8,
+        "createdAt": "2026-07-02",
+        "updatedAt": "2026-07-02"
+    },
+    {
+        "id": 8,
+        "name": "SHIMANO DURA-ACE 9100 ブレーキセット",
+        "category": "ブレーキ",
+        "manufacturer": "SHIMANO",
+        "year": "2017",
+        "price": 9800,
+        "condition": {
+            "rank": "B",
+            "junk": false,
+            "text": "使用感あり",
+            "notes": [
+                "動作良好"
+            ]
+        },
+        "spec": {
+            "weight": "293g",
+            "speed": "11s",
+            "material": "aluminum"
+        },
+        "description": [
+            {
+                "heading": "商品状態",
+                "body": "ブレーキ性能問題なし"
+            }
+        ],
+        "status": "available",
+        "bundleEligible": true,
+        "shippingSize": "small",
+        "images": [
+            "assets/images/brake9100.jpg"
+        ],
+        "favoriteCount": 1,
+        "createdAt": "2026-07-03",
+        "updatedAt": "2026-07-03"
+    },
+    {
+        "id": 9,
+        "name": "FIZIK ANTARES R1 サドル",
+        "category": "サドル",
+        "manufacturer": "FIZIK",
+        "year": "2020",
+        "price": 7000,
+        "condition": {
+            "rank": "B",
+            "junk": false,
+            "text": "使用感あり",
+            "notes": [
+                "座面傷あり"
+            ]
+        },
+        "spec": {
+            "weight": "155g",
+            "speed": "-",
+            "material": "carbon"
+        },
+        "description": [
+            {
+                "heading": "商品状態",
+                "body": "レール正常"
+            }
+        ],
+        "status": "reserved",
+        "bundleEligible": true,
+        "shippingSize": "small",
+        "images": [
+            "assets/images/fizik.jpg"
+        ],
+        "favoriteCount": 4,
+        "createdAt": "2026-07-04",
+        "updatedAt": "2026-07-05"
+    },
+    {
+        "id": 10,
+        "name": "BONTRAGER Aeolus カーボンホイール",
+        "category": "ホイール",
+        "manufacturer": "BONTRAGER",
+        "year": "2019",
+        "price": 55000,
+        "condition": {
+            "rank": "A",
+            "junk": false,
+            "text": "美品",
+            "notes": [
+                "走行少なめ"
+            ]
+        },
+        "spec": {
+            "weight": "1420g",
+            "speed": "11s",
+            "material": "carbon"
+        },
+        "description": [
+            {
+                "heading": "商品状態",
+                "body": "リム状態良好"
+            }
+        ],
+        "status": "available",
+        "bundleEligible": false,
+        "shippingSize": "large",
+        "images": [
+            "assets/images/aeolus.jpg"
+        ],
+        "favoriteCount": 7,
+        "createdAt": "2026-07-05",
+        "updatedAt": "2026-07-05"
+    },
+    {
+        "id": 11,
+        "name": "中古チェーンリング 52T",
+        "category": "コンポーネント",
+        "manufacturer": "SHIMANO",
+        "year": "2020",
+        "price": 2500,
+        "condition": {
+            "rank": "C",
+            "junk": true,
+            "text": "摩耗あり",
+            "notes": [
+                "交換推奨"
+            ]
+        },
+        "spec": {
+            "weight": "120g",
+            "speed": "11s",
+            "material": "aluminum"
+        },
+        "description": [
+            {
+                "heading": "ジャンク理由",
+                "body": "歯先摩耗あり"
+            }
+        ],
+        "status": "available",
+        "bundleEligible": true,
+        "shippingSize": "small",
+        "images": [
+            "assets/images/chainring.jpg"
+        ],
+        "favoriteCount": 0,
+        "createdAt": "2026-07-06",
+        "updatedAt": "2026-07-06"
+    },
+    {
+        "id": 12,
+        "name": "テスト",
+        "category": "コンポーネント",
+        "manufacturer": "テスト",
+        "year": "",
+        "price": 1111,
+        "condition": {
+            "rank": "A",
+            "junk": false,
+            "text": "",
+            "notes": []
+        },
+        "spec": {
+            "weight": "",
+            "speed": "",
+            "material": ""
+        },
+        "description": [
+            {
+                "heading": "商品状態",
+                "body": ""
+            }
+        ],
+        "status": "available",
+        "bundleEligible": true,
+        "shippingSize": "small",
+        "images": [
+            "assets/products/000012_テスト/1.JPG"
+        ],
+        "favoriteCount": 0,
+        "createdAt": "2026-07-20",
+        "updatedAt": "2026-07-20"
+    }
+]

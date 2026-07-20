@@ -7,98 +7,56 @@
     <title>カート | OVERHAUL</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nav.css">
 </head>
 
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  
+    <!-- ナビゲーション -->
+    <div id="navbar-container"></div>
+    
+    <div class="container mt-5">
 
-    <div class="container">
+        <h2 class="mb-4">
+            ショッピングカート
+        </h2>
 
-        <a class="navbar-brand fw-bold" href="index.html">
-            OVERHAUL
-        </a>
+        <div id="cart-items"></div>
 
-        <button class="navbar-toggler"
-                data-bs-toggle="collapse"
-                data-bs-target="#menu">
+        <hr>
 
-            <span class="navbar-toggler-icon"></span>
+        <div class="d-flex justify-content-between align-items-center flex-wrap">
 
-        </button>
+            <a href="products.html" class="btn btn-outline-secondary">
 
-        <div class="collapse navbar-collapse" id="menu">
+                ← 買い物を続ける
 
-            <ul class="navbar-nav ms-auto">
+            </a>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">TOP</a>
-                </li>
+            <div class="text-end">
 
-                <li class="nav-item">
-                    <a class="nav-link" href="products.html">商品一覧</a>
-                </li>
+                <h3>
+                    合計：
+                    <span id="cart-total">
+                        ¥0
+                    </span>
+                </h3>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="contact.html">お問い合わせ</a>
-                </li>
+                <button class="btn btn-dark btn-lg mt-2">
+                    購入手続きへ
+                </button>
 
-                <li class="nav-item">
-                    <a class="nav-link active" href="cart.html">
-                        カート
-                    </a>
-                </li>
-
-            </ul>
+            </div>
 
         </div>
 
     </div>
+    <script src="js/common.js"></script>
 
-</nav>
+    <script src="js/cart.js"></script>
 
-<div class="container mt-5">
-
-    <h2 class="mb-4">
-        ショッピングカート
-    </h2>
-
-    <div id="cart-items"></div>
-
-    <hr>
-
-    <div class="d-flex justify-content-between align-items-center flex-wrap">
-
-        <a href="products.html"
-           class="btn btn-outline-secondary">
-
-            ← 買い物を続ける
-
-        </a>
-
-        <div class="text-end">
-
-            <h3>
-                合計：
-                <span id="cart-total">
-                    ¥0
-                </span>
-            </h3>
-
-            <button class="btn btn-dark btn-lg mt-2">
-                購入手続きへ
-            </button>
-
-        </div>
-
-    </div>
-
-</div>
-
-<script src="js/cart.js"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 

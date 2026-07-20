@@ -1,3 +1,5 @@
+const API_BASE = "http://127.0.0.1:8000";
+
 let product = null;
 
 document.addEventListener("DOMContentLoaded", async () => {
@@ -14,23 +16,35 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 // JSON取得して1件抽出
 async function loadProduct(id) {
+
     try {
-        const res = await fetch("./data/products.json");
 
-        if (!res.ok) throw new Error("fetch error");
+        const res = await fetch(
+            `${API_BASE}/api/products/${id}?ver=${Date.now()}`,
+            {
+                cache: "no-store"
+            }
+        );
 
-        const data = await res.json();
+        if (!res.ok) {
+            throw new Error("商品取得に失敗しました");
+        }
 
-        product = data.find(p => String(p.id) === String(id));
+        product = await res.json();
 
-        if (!product) {
-            showError("商品が見つかりません");
+        if (product.message) {
+            showError(product.message);
+            product = null;
         }
 
     } catch (e) {
+
         console.error(e);
+
         showError("読み込み失敗");
+
     }
+
 }
 
 // 描画
@@ -103,21 +117,58 @@ function render() {
                     ${escapeHtml(product.manufacturer)}
                 </div>
 
-                <div class="d-flex align-items-center gap-2">
+                <div class="mb-3">
+                    <strong>スペック</strong>
+                        <ul>
+                            <li>
+                                重量：
+                                ${escapeHtml(product.spec?.weight ?? "-")}
+                                </li>
+                                <li>
+                                変速：
+                                ${escapeHtml(product.spec?.speed ?? "-")}
+                                </li>
+                                <li>
+                                素材：
+                                ${escapeHtml(product.spec?.material ?? "-")}
+                                </li>
+                                </ul>
+                    </div>
 
-                    <strong>ランク：</strong>
 
-                    <span class="rank-badge rank-${product.rank}">
-                        ${escapeHtml(product.rank)}
-                    </span>
 
-                    <span class="rank-text">
-                        ${getRankName(product.rank)}
-                    </span>
+                <div class="mb-2">
 
+                    <strong>年式：</strong>
+                    ${escapeHtml(product.year ?? "不明")}
                 </div>
 
-            </div>
+                <div class="d-flex align-items-center gap-2">
+
+                    <strong>状態：</strong>
+
+                    <span class="rank-badge rank-${product.condition?.rank}">
+                        ${escapeHtml(product.condition?.rank ?? "-")}
+                    </span>
+
+
+                    ${product.condition?.junk
+            ?
+            `
+                    <span class="junk-badge">
+                    JUNK
+                    </span>
+                    `
+            :
+            ""
+        }
+
+                    <span class="rank-text">
+                    ${getRankName(product.condition?.rank)}
+                    </span>
+
+                    </div>
+                </div>
 
             <button
                 class="btn btn-dark w-100 mb-3"
@@ -179,16 +230,18 @@ function imageError(img) {
 function getRankName(rank) {
 
     const names = {
-        S: "新品・未使用",
-        A: "非常に良い",
-        B: "良好",
-        C: "使用感あり",
-        D: "傷・汚れあり",
-        E: "難あり",
-        J: "ジャンク"
+
+        A: "美品",
+
+        B: "良品",
+
+        C: "傷・使用感あり"
+
     };
 
+
     return names[rank] || "";
+
 }
 
 // 商品説明（見出し＋本文の配列）をHTMLへ変換

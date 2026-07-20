@@ -1,3 +1,4 @@
+const API_BASE = "http://127.0.0.1:8000";
 document.addEventListener("DOMContentLoaded", loadCart);
 function escapeHtml(str) {
 
@@ -16,7 +17,13 @@ async function loadCart() {
 
     const cart = getCart();
 
-    const res = await fetch("./data/products.json");
+    const res = await fetch(
+        `${API_BASE}/api/products?ver=${Date.now()}`,
+        {
+            cache: "no-store"
+        }
+    );
+
     const products = await res.json();
 
     const area = document.getElementById("cart-items");
@@ -40,15 +47,15 @@ async function loadCart() {
 
     cart.forEach((item, index) => {
 
-    const product = products.find(p => p.id == item.id);
+        const product = products.find(p => p.id == item.id);
 
-    if (!product) return;
+        if (!product) return;
 
-    const image = product.images?.[0] || "assets/images/noimage.jpg";
+        const image = product.images?.[0] || "assets/images/noimage.jpg";
 
-    total += product.price;
+        total += product.price;
 
-    area.innerHTML += `
+        area.innerHTML += `
 
 <div class="card mb-4 shadow-sm">
 
@@ -111,7 +118,7 @@ async function loadCart() {
 
 `;
 
-});
+    });
 
 
     document.getElementById("cart-total").innerText =

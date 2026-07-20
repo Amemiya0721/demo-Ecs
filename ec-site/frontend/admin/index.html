@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>OVERHAUL 管理画面</title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/admin.css">
+
+</head>
+
+<body class="bg-light">
+
+<nav class="navbar navbar-dark bg-dark">
+
+    <div class="container-fluid">
+
+        <span class="navbar-brand fw-bold">
+            OVERHAUL 管理画面
+        </span>
+
+        <a href="product-new.html"
+            class="btn btn-success">
+
+            ＋ 商品追加
+
+        </a>
+
+    </div>
+
+</nav>
+
+<div class="container py-4">
+
+    <div class="card shadow-sm">
+
+        <div class="card-body">
+
+            <div class="row g-3">
+
+                <div class="col-md-5">
+
+                    <input
+                        id="search"
+                        class="form-control"
+                        placeholder="商品名・メーカー検索">
+
+                </div>
+
+                <div class="col-md-3">
+
+                    <select
+                        id="sort"
+                        class="form-select">
+
+                        <option value="new">新着順</option>
+                        <option value="priceAsc">価格が安い順</option>
+                        <option value="priceDesc">価格が高い順</option>
+
+                    </select>
+
+                </div>
+
+                <div class="col-md-4 text-end">
+
+                    <strong>
+
+                        商品数：
+                        <span id="count">0</span>
+
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="card shadow-sm mt-4">
+
+        <div class="card-header">
+
+            <h5 class="mb-0">
+
+                商品一覧
+
+            </h5>
+
+        </div>
+
+        <div class="table-responsive">
+
+            <table class="table table-hover align-middle mb-0">
+
+                <thead class="table-light">
+
+                    <tr>
+
+                        <th>ID</th>
+
+                        <th width="90">
+                            画像
+                        </th>
+
+                        <th>商品名</th>
+
+                        <th>メーカー</th>
+
+                        <th>カテゴリ</th>
+
+                        <th class="text-end">
+                            価格
+                        </th>
+
+                        <th class="text-center">
+                            ランク
+                        </th>
+
+                        <th class="text-center">
+                            状態
+                        </th>
+
+                        <th width="180">
+                            操作
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="productTable">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="js/admin.js"></script>
+
+</body>
+
+</html>

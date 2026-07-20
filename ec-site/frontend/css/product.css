@@ -1,0 +1,449 @@
+/* =====================================
+   OVERHAUL
+   Product Detail
+===================================== */
+
+
+/* ページ */
+body {
+
+    background:#f8f8f8;
+
+    color:#222;
+
+}
+
+
+
+
+
+
+/* =========================
+   商品画像
+========================= */
+
+
+#mainImageArea {
+
+    background:#fff;
+
+    padding:25px;
+
+    border:1px solid #e5e5e5;
+
+}
+
+
+
+#mainImage {
+
+
+    width:100%;
+
+    max-height:500px;
+
+    object-fit:contain;
+
+
+    transition:.3s;
+
+
+}
+
+
+#mainImage:hover {
+
+
+    transform:scale(1.03);
+
+
+}
+
+
+
+/* サムネイル */
+
+.thumb-image {
+
+
+    transition:.25s;
+
+    border:1px solid #ddd!important;
+
+
+}
+
+
+
+.thumb-image:hover {
+
+
+    transform:translateY(-5px);
+
+    border-color:#111!important;
+
+
+}
+
+
+
+/* =========================
+ 商品情報
+========================= */
+
+
+#product-detail h2 {
+
+
+    font-size:2rem;
+
+    font-weight:700;
+
+    letter-spacing:.08em;
+
+    margin-bottom:10px;
+
+
+}
+
+
+
+/* カテゴリー */
+
+.text-muted {
+
+
+    letter-spacing:.1em;
+
+
+}
+
+
+
+/* 価格 */
+
+
+.text-danger {
+
+
+    color:#cc4d4d!important;
+
+    font-size:2rem;
+
+    font-weight:700;
+
+    margin:25px 0;
+
+
+}
+
+
+
+/* =========================
+ 説明
+========================= */
+
+
+.product-description {
+
+
+    background:#fff;
+
+    padding:25px;
+
+    border:1px solid #eee;
+
+    margin-bottom:25px;
+
+
+}
+
+
+
+.description-section {
+
+
+    border-bottom:1px solid #343434;
+
+    padding-bottom:15px;
+
+
+}
+
+
+
+.description-section:last-child {
+
+
+    border-bottom:none;
+
+
+}
+
+
+
+.description-section h5 {
+
+
+    font-size:1.1rem;
+
+    font-weight:700;
+
+    margin-bottom:12px;
+
+
+}
+
+
+
+.description-section ul {
+
+
+    padding-left:20px;
+
+    color:#555;
+
+    line-height:1.9;
+
+
+}
+
+
+
+
+/* =========================
+ スペック
+========================= */
+
+
+strong {
+
+
+    font-weight:700;
+
+
+}
+
+
+ul {
+
+
+    line-height:1.8;
+
+
+}
+
+
+
+
+/* =========================
+ ランク表示
+========================= */
+
+
+.rank-badge {
+
+
+    display:inline-block;
+
+    padding:5px 14px;
+
+    border-radius:20px;
+
+    font-size:.85rem;
+
+    font-weight:bold;
+
+}
+
+
+
+.rank-A {
+
+
+    background:#111;
+
+    color:#fff;
+
+
+}
+
+
+
+.rank-B {
+
+
+    background:#555;
+
+    color:#fff;
+
+
+}
+
+
+
+.rank-C {
+
+
+    background:#ddd;
+
+    color:#333;
+
+
+}
+
+
+
+/* JUNK */
+
+.junk-badge {
+
+
+    background:#b00000;
+
+    color:white;
+
+    padding:5px 12px;
+
+    border-radius:20px;
+
+    font-size:.8rem;
+
+    font-weight:bold;
+
+
+}
+
+
+
+.rank-text {
+
+
+    color:#666;
+
+    font-size:.9rem;
+
+
+}
+
+
+
+/* =========================
+ ボタン
+========================= */
+
+
+.btn-dark {
+
+
+    padding:16px;
+
+    letter-spacing:.15em;
+
+    transition:.3s;
+
+
+}
+
+
+
+.btn-dark:hover {
+
+
+    transform:translateY(-3px);
+
+
+}
+
+
+
+/* SNS */
+
+.btn-sm {
+
+
+    padding:8px 15px;
+
+
+}
+
+
+
+/* =========================
+ スマホ
+========================= */
+
+
+@media(max-width:768px){
+
+
+    #product-detail h2 {
+
+
+        font-size:1.5rem;
+
+
+    }
+
+
+
+    .text-danger {
+
+
+        font-size:1.6rem;
+
+
+    }
+
+
+
+    #mainImageArea {
+
+
+        padding:10px;
+
+
+    }
+
+
+
+    .product-description {
+
+
+        padding:15px;
+
+
+    }
+
+
+}
+
+
+
+/* =========================
+ animation
+========================= */
+
+
+@keyframes fadeUp {
+
+
+    from {
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+
+    to {
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+
+}
